@@ -7,7 +7,7 @@ export default class Start extends Command {
   static override examples = ['<%= config.bin %> <%= command.id %>']
   static override flags = {
     break: Flags.integer({char: 'b', default: 5, description: 'Short break duration in minutes'}),
-    'long-break': Flags.integer({char: 'l', default: 15, description: 'Long break duration in minutes'}),
+    longBreak: Flags.integer({char: 'l', default: 15, description: 'Long break duration in minutes'}),
     sessions: Flags.integer({char: 's', default: 4, description: 'Number of work sessions before long break'}),
     work: Flags.integer({char: 'w', default: 25, description: 'Work duration in minutes'}),
   }
@@ -21,38 +21,9 @@ export default class Start extends Command {
 
     this.remainingTime = flags.work * 60 * 1000
 
-    // const name = flags.name ?? 'world'
-    // this.log(`hello ${name} from D:\\Development\\CLI\\comodoro\\src\\commands\\start.ts`)
-    // if (args.file && flags.force) {
-    //   this.log(`you input --force and --file: ${args.file}`)
-    // }
-
-    // Initial display and start
     this.log('Pomodoro Timer Started!')
     this.displayTime()
     this.startTimer()
-
-    // (Optional) Implement pause/resume and stop using process.stdin and event listeners
-    // process.stdin.setRawMode(true)
-    // process.stdin.resume()
-    // process.stdin.setEncoding('utf8')
-
-    // process.stdin.on('data', (key) => {
-    //   if (key === 'p') {
-    //     // Pause
-    //     clearInterval(this.timerInterval)
-    //     console.log('\nPaused. Press "r" to resume.')
-    //     this.timerInterval = undefined
-    //   } else if (key === 'r' && this.timerInterval === null) {
-    //     // Resume
-    //     console.log('Resumed.')
-    //     this.startTimer()
-    //   } else if (key === '\u0003') {
-    //     // Ctrl+C to exit
-    //     console.log('\nTimer stopped.')
-    //     process.exit()
-    //   }
-    // })
   }
 
   private displayTime() {
