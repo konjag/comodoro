@@ -1,1 +1,5 @@
-export type Interval = 'longBreak' | 'shortBreak' | 'work'
+export enum Interval {
+  Work,
+  ShortBreak,
+  LongBreak,
+}
