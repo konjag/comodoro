@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-import React from 'react';
-import {render} from 'ink';
-import meow from 'meow';
-import App from './app.js';
+import React from "react";
+import { render } from "ink";
+import meow from "meow";
+import App from "./app.js";
 
 const cli = meow(
-	`
+  `
 	Usage
 	  $ comodoro
 
@@ -21,47 +21,47 @@ const cli = meow(
 	  $ comodoro --name=Jane
 	  Hello, Jane
 `,
-	{
-		importMeta: import.meta,
-		flags: {
-			break: {
-				type: 'number',
-				default: 5,
-				shortFlag: 'b',
-				alias: 'b',
-			},
-			longBreak: {
-				type: 'number',
-				default: 15,
-				shortFlag: 'l',
-				alias: 'l',
-			},
-			noBeep: {
-				type: 'boolean',
-				default: false,
-			},
-			sessions: {
-				type: 'number',
-				default: 4,
-				shortFlag: 's',
-				alias: 's',
-			},
-			work: {
-				type: 'number',
-				default: 25,
-				shortFlag: 'w',
-				alias: 'w',
-			},
-		},
-	},
+  {
+    importMeta: import.meta,
+    flags: {
+      break: {
+        type: "number",
+        default: 5,
+        shortFlag: "b",
+        alias: "b",
+      },
+      longBreak: {
+        type: "number",
+        default: 15,
+        shortFlag: "l",
+        alias: "l",
+      },
+      noBeep: {
+        type: "boolean",
+        default: false,
+      },
+      sessions: {
+        type: "number",
+        default: 4,
+        shortFlag: "s",
+        alias: "s",
+      },
+      work: {
+        type: "number",
+        default: 25,
+        shortFlag: "w",
+        alias: "w",
+      },
+    },
+  },
 );
 
 render(
-	<App
-		shortBreak={cli.flags.break}
-		longBreak={cli.flags.longBreak}
-		noBeep={cli.flags.noBeep}
-		sessions={cli.flags.sessions}
-		work={cli.flags.work}
-	/>,
+  <App
+    shortBreak={cli.flags.break}
+    longBreak={cli.flags.longBreak}
+    noBeep={cli.flags.noBeep}
+    sessions={cli.flags.sessions}
+    work={cli.flags.work}
+  />,
 );

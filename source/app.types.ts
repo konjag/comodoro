@@ -1,5 +1,5 @@
 export enum Interval {
-	Work,
-	ShortBreak,
-	LongBreak,
+  Work,
+  ShortBreak,
+  LongBreak,
 }
