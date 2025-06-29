@@ -4,6 +4,7 @@ import test from 'ava';
 import {render} from 'ink-testing-library';
 import App from './source/app.js';
 
+// TODO: Update tests
 test('greet unknown user', t => {
 	const {lastFrame} = render(<App name={undefined} />);
 
