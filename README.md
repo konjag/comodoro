@@ -22,27 +22,13 @@ Comodoro is a CLI implementation of the Pomodoro Technique, a time management me
 ## Screenshots
 
 ### Minimal Display Mode
-```
-Work: 24:59
-```
+<img width="132" height="31" alt="image" src="https://github.com/user-attachments/assets/da9197c4-5819-48cc-ac84-346d4686ec8e" />
+
 *Simple one-line display showing current interval and remaining time*
 
 ### Full Display Mode
-```
-╔════════════════════════════════════════════════╗
-║                                                ║
-║                     WORK                       ║
-║                                                ║
-║                    24:59                       ║
-║                                                ║
-║           Completed work sessions: 1           ║
-║                                                ║
-║      ─────────────────────────────────────     ║
-║                                                ║
-║             Press 'p' to pause/resume          ║
-║                                                ║
-╚════════════════════════════════════════════════╝
-```
+<img width="521" height="326" alt="image" src="https://github.com/user-attachments/assets/cd26a1d0-349b-47a6-814c-5beae8e5e2b0" />
+
 *Bordered display with additional information and visual emphasis*
 
 ## Installation
