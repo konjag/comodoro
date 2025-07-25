@@ -1,6 +1,6 @@
 # Comodoro 🍅
 
-> A Pomodoro timer for the command line built with React and Ink
+A Pomodoro timer for the command line built with React and Ink
 
 [![npm version](https://badge.fury.io/js/comodoro.svg)](https://www.npmjs.com/package/comodoro)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
