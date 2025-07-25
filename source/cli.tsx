@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import React from "react";
-import { render } from "ink";
-import meow from "meow";
-import App from "./app.js";
+import React from 'react';
+import { render } from 'ink';
+import meow from 'meow';
+import App from './app.js';
 
 const cli = meow(
   `
@@ -16,6 +16,7 @@ const cli = meow(
 		--noBeep  Disable beeper (default: false)
 		--sessions, -s  Number of work sessions before long break (default: 4)
 		--work, -w  Work duration in minutes (default: 25)
+		--fullDisplay, -f  Render FullDisplay if true, MinimalTimer if false (default: false)
 
 	Examples
 	  $ comodoro --name=Jane
@@ -25,32 +26,38 @@ const cli = meow(
     importMeta: import.meta,
     flags: {
       break: {
-        type: "number",
+        type: 'number',
         default: 5,
-        shortFlag: "b",
-        alias: "b",
+        shortFlag: 'b',
+        alias: 'b',
       },
       longBreak: {
-        type: "number",
+        type: 'number',
         default: 15,
-        shortFlag: "l",
-        alias: "l",
+        shortFlag: 'l',
+        alias: 'l',
       },
       noBeep: {
-        type: "boolean",
+        type: 'boolean',
         default: false,
       },
       sessions: {
-        type: "number",
+        type: 'number',
         default: 4,
-        shortFlag: "s",
-        alias: "s",
+        shortFlag: 's',
+        alias: 's',
       },
       work: {
-        type: "number",
+        type: 'number',
         default: 25,
-        shortFlag: "w",
-        alias: "w",
+        shortFlag: 'w',
+        alias: 'w',
+      },
+      fullDisplay: {
+        type: 'boolean',
+        default: false,
+        shortFlag: 'f',
+        alias: 'f',
       },
     },
   },
@@ -63,5 +70,6 @@ render(
     noBeep={cli.flags.noBeep}
     sessions={cli.flags.sessions}
     work={cli.flags.work}
+    fullDisplay={cli.flags.fullDisplay}
   />,
 );
